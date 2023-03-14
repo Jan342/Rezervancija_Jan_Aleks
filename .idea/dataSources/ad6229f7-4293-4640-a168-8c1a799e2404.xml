@@ -9,9 +9,9 @@
 16386||16385|C|G
 16386||-9223372036854775808|T|G
 16386||16384|T|G</Grants>
-      <IntrospectionStateNumber>80913</IntrospectionStateNumber>
+      <IntrospectionStateNumber>28677</IntrospectionStateNumber>
       <ServerVersion>15.2</ServerVersion>
-      <StartupTime>1683453696</StartupTime>
+      <StartupTime>1678782006</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -54,7 +54,7 @@ false Africa/Brazzaville
 false Africa/Bujumbura
 false Africa/Cairo
 false Africa/Casablanca
-true Africa/Ceuta
+false Africa/Ceuta
 false Africa/Conakry
 false Africa/Dakar
 false Africa/Dar_es_Salaam
@@ -112,7 +112,7 @@ false America/Argentina/San_Luis
 false America/Argentina/Tucuman
 false America/Argentina/Ushuaia
 false America/Aruba
-false America/Asuncion
+true America/Asuncion
 false America/Atikokan
 true America/Atka
 false America/Bahia
@@ -236,10 +236,10 @@ false America/Rio_Branco
 false America/Rosario
 true America/Santa_Isabel
 false America/Santarem
-false America/Santiago
+true America/Santiago
 false America/Santo_Domingo
 false America/Sao_Paulo
-true America/Scoresbysund
+false America/Scoresbysund
 true America/Shiprock
 true America/Sitka
 false America/St_Barthelemy
@@ -264,16 +264,16 @@ true America/Yellowknife
 false Antarctica/Casey
 false Antarctica/Davis
 false Antarctica/DumontDUrville
-false Antarctica/Macquarie
+true Antarctica/Macquarie
 false Antarctica/Mawson
-false Antarctica/McMurdo
+true Antarctica/McMurdo
 false Antarctica/Palmer
 false Antarctica/Rothera
-false Antarctica/South_Pole
+true Antarctica/South_Pole
 false Antarctica/Syowa
-true Antarctica/Troll
+false Antarctica/Troll
 false Antarctica/Vostok
-true Arctic/Longyearbyen
+false Arctic/Longyearbyen
 false Asia/Aden
 false Asia/Almaty
 false Asia/Amman
@@ -288,7 +288,7 @@ false Asia/Bahrain
 false Asia/Baku
 false Asia/Bangkok
 false Asia/Barnaul
-true Asia/Beirut
+false Asia/Beirut
 false Asia/Bishkek
 false Asia/Brunei
 false Asia/Calcutta
@@ -303,10 +303,10 @@ false Asia/Dhaka
 false Asia/Dili
 false Asia/Dubai
 false Asia/Dushanbe
-true Asia/Famagusta
-true Asia/Gaza
+false Asia/Famagusta
+false Asia/Gaza
 false Asia/Harbin
-true Asia/Hebron
+false Asia/Hebron
 false Asia/Ho_Chi_Minh
 false Asia/Hong_Kong
 false Asia/Hovd
@@ -314,7 +314,7 @@ false Asia/Irkutsk
 false Asia/Istanbul
 false Asia/Jakarta
 false Asia/Jayapura
-true Asia/Jerusalem
+false Asia/Jerusalem
 false Asia/Kabul
 false Asia/Kamchatka
 false Asia/Karachi
@@ -333,7 +333,7 @@ false Asia/Magadan
 false Asia/Makassar
 false Asia/Manila
 false Asia/Muscat
-true Asia/Nicosia
+false Asia/Nicosia
 false Asia/Novokuznetsk
 false Asia/Novosibirsk
 false Asia/Omsk
@@ -357,7 +357,7 @@ false Asia/Taipei
 false Asia/Tashkent
 false Asia/Tbilisi
 false Asia/Tehran
-true Asia/Tel_Aviv
+false Asia/Tel_Aviv
 false Asia/Thimbu
 false Asia/Thimphu
 false Asia/Tokyo
@@ -373,41 +373,41 @@ false Asia/Yakutsk
 false Asia/Yangon
 false Asia/Yekaterinburg
 false Asia/Yerevan
-true Atlantic/Azores
+false Atlantic/Azores
 true Atlantic/Bermuda
-true Atlantic/Canary
+false Atlantic/Canary
 false Atlantic/Cape_Verde
-true Atlantic/Faeroe
-true Atlantic/Faroe
-true Atlantic/Jan_Mayen
-true Atlantic/Madeira
+false Atlantic/Faeroe
+false Atlantic/Faroe
+false Atlantic/Jan_Mayen
+false Atlantic/Madeira
 false Atlantic/Reykjavik
 false Atlantic/South_Georgia
 false Atlantic/St_Helena
 false Atlantic/Stanley
-false Australia/ACT
-false Australia/Adelaide
+true Australia/ACT
+true Australia/Adelaide
 false Australia/Brisbane
-false Australia/Broken_Hill
-false Australia/Canberra
-false Australia/Currie
+true Australia/Broken_Hill
+true Australia/Canberra
+true Australia/Currie
 false Australia/Darwin
 false Australia/Eucla
-false Australia/Hobart
-false Australia/LHI
+true Australia/Hobart
+true Australia/LHI
 false Australia/Lindeman
-false Australia/Lord_Howe
-false Australia/Melbourne
-false Australia/NSW
+true Australia/Lord_Howe
+true Australia/Melbourne
+true Australia/NSW
 false Australia/North
 false Australia/Perth
 false Australia/Queensland
-false Australia/South
-false Australia/Sydney
-false Australia/Tasmania
-false Australia/Victoria
+true Australia/South
+true Australia/Sydney
+true Australia/Tasmania
+true Australia/Victoria
 false Australia/West
-false Australia/Yancowinna
+true Australia/Yancowinna
 true BDST
 false BDT
 false BNT
@@ -434,7 +434,7 @@ false CHAST
 false CHUT
 false CKT
 true CLST
-false CLT
+true CLT
 false COT
 false CST
 true CST6CDT
@@ -447,13 +447,13 @@ true Canada/Newfoundland
 true Canada/Pacific
 false Canada/Saskatchewan
 false Canada/Yukon
-false Chile/Continental
-false Chile/EasterIsland
+true Chile/Continental
+true Chile/EasterIsland
 true Cuba
 false DAVT
 false DDUT
-false EASST
-false EAST
+true EASST
+true EAST
 false EAT
 true EDT
 true EEST
@@ -464,7 +464,7 @@ false EGT
 false EST
 true EST5EDT
 false Egypt
-false Eire
+true Eire
 false Etc/GMT
 false Etc/GMT+0
 false Etc/GMT+1
@@ -500,70 +500,70 @@ false Etc/UCT
 false Etc/UTC
 false Etc/Universal
 false Etc/Zulu
-true Europe/Amsterdam
-true Europe/Andorra
+false Europe/Amsterdam
+false Europe/Andorra
 false Europe/Astrakhan
-true Europe/Athens
-true Europe/Belfast
-true Europe/Belgrade
-true Europe/Berlin
-true Europe/Bratislava
-true Europe/Brussels
-true Europe/Bucharest
-true Europe/Budapest
-true Europe/Busingen
-true Europe/Chisinau
-true Europe/Copenhagen
-false Europe/Dublin
-true Europe/Gibraltar
-true Europe/Guernsey
-true Europe/Helsinki
-true Europe/Isle_of_Man
+false Europe/Athens
+false Europe/Belfast
+false Europe/Belgrade
+false Europe/Berlin
+false Europe/Bratislava
+false Europe/Brussels
+false Europe/Bucharest
+false Europe/Budapest
+false Europe/Busingen
+false Europe/Chisinau
+false Europe/Copenhagen
+true Europe/Dublin
+false Europe/Gibraltar
+false Europe/Guernsey
+false Europe/Helsinki
+false Europe/Isle_of_Man
 false Europe/Istanbul
-true Europe/Jersey
+false Europe/Jersey
 false Europe/Kaliningrad
-true Europe/Kiev
+false Europe/Kiev
 false Europe/Kirov
-true Europe/Kyiv
-true Europe/Lisbon
-true Europe/Ljubljana
-true Europe/London
-true Europe/Luxembourg
-true Europe/Madrid
-true Europe/Malta
-true Europe/Mariehamn
+false Europe/Kyiv
+false Europe/Lisbon
+false Europe/Ljubljana
+false Europe/London
+false Europe/Luxembourg
+false Europe/Madrid
+false Europe/Malta
+false Europe/Mariehamn
 false Europe/Minsk
-true Europe/Monaco
+false Europe/Monaco
 false Europe/Moscow
-true Europe/Nicosia
-true Europe/Oslo
-true Europe/Paris
-true Europe/Podgorica
-true Europe/Prague
-true Europe/Riga
-true Europe/Rome
+false Europe/Nicosia
+false Europe/Oslo
+false Europe/Paris
+false Europe/Podgorica
+false Europe/Prague
+false Europe/Riga
+false Europe/Rome
 false Europe/Samara
-true Europe/San_Marino
-true Europe/Sarajevo
+false Europe/San_Marino
+false Europe/Sarajevo
 false Europe/Saratov
 false Europe/Simferopol
-true Europe/Skopje
-true Europe/Sofia
-true Europe/Stockholm
-true Europe/Tallinn
-true Europe/Tirane
-true Europe/Tiraspol
+false Europe/Skopje
+false Europe/Sofia
+false Europe/Stockholm
+false Europe/Tallinn
+false Europe/Tirane
+false Europe/Tiraspol
 false Europe/Ulyanovsk
-true Europe/Uzhgorod
-true Europe/Vaduz
-true Europe/Vatican
-true Europe/Vienna
-true Europe/Vilnius
+false Europe/Uzhgorod
+false Europe/Vaduz
+false Europe/Vatican
+false Europe/Vienna
+false Europe/Vilnius
 false Europe/Volgograd
-true Europe/Warsaw
-true Europe/Zagreb
-true Europe/Zaporozhye
-true Europe/Zurich
+false Europe/Warsaw
+false Europe/Zagreb
+false Europe/Zaporozhye
+false Europe/Zurich
 false FET
 true FJST
 false FJT
@@ -574,8 +574,8 @@ false FNT
 false Factory
 false GALT
 false GAMT
-true GB
-true GB-Eire
+false GB
+false GB-Eire
 false GEST
 false GET
 false GFT
@@ -609,7 +609,7 @@ false Indian/Mauritius
 false Indian/Mayotte
 false Indian/Reunion
 false Iran
-true Israel
+false Israel
 false JAYT
 false JST
 false Jamaica
@@ -622,7 +622,7 @@ false KRAST
 false KRAT
 false KST
 false Kwajalein
-false LHDT
+true LHDT
 false LHST
 false LIGT
 false LINT
@@ -635,7 +635,7 @@ false MAWT
 true MDT
 true MEST
 true MESZ
-true MET
+false MET
 true METDST
 false MEZ
 false MHT
@@ -659,8 +659,8 @@ false NOVT
 false NPT
 false NST
 false NUT
-false NZ
-false NZ-CHAT
+true NZ
+true NZ-CHAT
 true NZDT
 false NZST
 false NZT
@@ -684,13 +684,13 @@ false PST
 true PST8PDT
 false PWT
 true PYST
-false PYT
+true PYT
 false Pacific/Apia
-false Pacific/Auckland
+true Pacific/Auckland
 false Pacific/Bougainville
-false Pacific/Chatham
+true Pacific/Chatham
 false Pacific/Chuuk
-false Pacific/Easter
+true Pacific/Easter
 false Pacific/Efate
 false Pacific/Enderbury
 false Pacific/Fakaofo
@@ -711,7 +711,7 @@ false Pacific/Marquesas
 false Pacific/Midway
 false Pacific/Nauru
 false Pacific/Niue
-false Pacific/Norfolk
+true Pacific/Norfolk
 false Pacific/Noumea
 false Pacific/Pago_Pago
 false Pacific/Palau
@@ -729,8 +729,8 @@ false Pacific/Truk
 false Pacific/Wake
 false Pacific/Wallis
 false Pacific/Yap
-true Poland
-true Portugal
+false Poland
+false Portugal
 false RET
 false ROC
 false ROK
@@ -781,7 +781,7 @@ false WAKT
 false WAST
 false WAT
 true WDT
-true WET
+false WET
 true WETDST
 false WFT
 true WGST
@@ -808,7 +808,7 @@ false Zulu
 12401||10|C|G
 12401||-9223372036854775808|U|G
 12401||10|U|G</Grants>
-      <IntrospectionStateNumber>80913</IntrospectionStateNumber>
+      <IntrospectionStateNumber>28677</IntrospectionStateNumber>
       <ObjectId>16386</ObjectId>
       <OwnerName>alekshj2004</OwnerName>
     </database>
@@ -4238,160 +4238,90 @@ false Zulu
     <schema id="264" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>80913</IntrospectionStateNumber>
+      <IntrospectionStateNumber>28677</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
-      <StateNumber>80899</StateNumber>
+      <StateNumber>28673</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
     </schema>
-    <routine id="265" parent="264" name="insert_reg">
-      <ArgumentsDefinition>username_reg character varying, password_reg character varying, email_reg character varying</ArgumentsDefinition>
-      <ObjectId>57344</ObjectId>
-      <ResultsDefinition>void</ResultsDefinition>
-      <Rows>0.0</Rows>
-      <SourceTextLength>119</SourceTextLength>
-      <StateNumber>40972</StateNumber>
-      <LanguageName>plpgsql</LanguageName>
-      <OwnerName>alekshj2004</OwnerName>
-    </routine>
-    <routine id="266" parent="264" name="registration_insert">
-      <ArgumentsDefinition>username_reg character varying, password_reg character varying, email_reg character varying</ArgumentsDefinition>
-      <ObjectId>57346</ObjectId>
-      <ResultsDefinition>void</ResultsDefinition>
-      <Rows>0.0</Rows>
-      <SourceTextLength>116</SourceTextLength>
-      <StateNumber>40982</StateNumber>
-      <LanguageName>plpgsql</LanguageName>
-      <OwnerName>alekshj2004</OwnerName>
-    </routine>
-    <routine id="267" parent="264" name="username_uporabnika">
-      <ArgumentsDefinition>usernames character varying</ArgumentsDefinition>
-      <ObjectId>73728</ObjectId>
-      <ResultsDefinition>boolean</ResultsDefinition>
-      <Rows>0.0</Rows>
-      <SourceTextLength>144</SourceTextLength>
-      <StateNumber>77828</StateNumber>
-      <LanguageName>plpgsql</LanguageName>
-      <OwnerName>alekshj2004</OwnerName>
-    </routine>
-    <sequence id="268" parent="264" name="Igrisca_id_seq">
+    <sequence id="265" parent="264" name="Igrisca_id_seq">
       <DasType>integer|0s</DasType>
       <ObjectId>24603</ObjectId>
       <StateNumber>2069</StateNumber>
       <OwnerName>alekshj2004</OwnerName>
     </sequence>
-    <sequence id="269" parent="264" name="Kraji_id_seq">
+    <sequence id="266" parent="264" name="Kraji_id_seq">
       <DasType>integer|0s</DasType>
       <ObjectId>24596</ObjectId>
       <StateNumber>2067</StateNumber>
       <OwnerName>alekshj2004</OwnerName>
     </sequence>
-    <sequence id="270" parent="264" name="Rezervaija_id_seq">
+    <sequence id="267" parent="264" name="Rezervaija_id_seq">
       <DasType>integer|0s</DasType>
       <ObjectId>24576</ObjectId>
       <StateNumber>2058</StateNumber>
       <OwnerName>alekshj2004</OwnerName>
     </sequence>
-    <sequence id="271" parent="264" name="Sport_id_seq">
+    <sequence id="268" parent="264" name="Sport_id_seq">
       <DasType>integer|0s</DasType>
       <ObjectId>24587</ObjectId>
       <StateNumber>2063</StateNumber>
       <OwnerName>alekshj2004</OwnerName>
     </sequence>
-    <sequence id="272" parent="264" name="sport_igrisce_id_seq">
+    <sequence id="269" parent="264" name="Uporabniki_id_seq">
+      <DasType>integer|0s</DasType>
+      <ObjectId>24622</ObjectId>
+      <StateNumber>2076</StateNumber>
+      <OwnerName>alekshj2004</OwnerName>
+    </sequence>
+    <sequence id="270" parent="264" name="sport_igrisce_id_seq">
       <DasType>integer|0s</DasType>
       <ObjectId>24613</ObjectId>
       <StateNumber>2072</StateNumber>
       <OwnerName>alekshj2004</OwnerName>
     </sequence>
-    <sequence id="273" parent="264" name="uporabniki_id_seq">
-      <DasType>integer|0s</DasType>
-      <ObjectId>90139</ObjectId>
-      <StateNumber>80903</StateNumber>
-      <OwnerName>alekshj2004</OwnerName>
-    </sequence>
-    <table id="274" parent="264" name="Igrisca">
+    <table id="271" parent="264" name="Igrisca">
       <ObjectId>24604</ObjectId>
       <Options>autovacuum_enabled=true</Options>
       <StateNumber>2078</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>alekshj2004</OwnerName>
     </table>
-    <table id="275" parent="264" name="Rezervacija">
+    <table id="272" parent="264" name="Rezervacija">
       <ObjectId>24577</ObjectId>
       <Options>autovacuum_enabled=true</Options>
       <StateNumber>5124</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>alekshj2004</OwnerName>
     </table>
-    <table id="276" parent="264" name="Sport">
+    <table id="273" parent="264" name="Sport">
       <ObjectId>24588</ObjectId>
       <Options>autovacuum_enabled=true</Options>
       <StateNumber>2079</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>alekshj2004</OwnerName>
     </table>
-    <table id="277" parent="264" name="kraji">
+    <table id="274" parent="264" name="Uporabniki">
+      <ObjectId>24623</ObjectId>
+      <Options>autovacuum_enabled=true</Options>
+      <StateNumber>2082</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>alekshj2004</OwnerName>
+    </table>
+    <table id="275" parent="264" name="kraji">
       <ObjectId>24597</ObjectId>
       <Options>autovacuum_enabled=true</Options>
       <StateNumber>3076</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>alekshj2004</OwnerName>
     </table>
-    <table id="278" parent="264" name="sport_igrisce">
+    <table id="276" parent="264" name="sport_igrisce">
       <ObjectId>24614</ObjectId>
       <Options>autovacuum_enabled=true</Options>
       <StateNumber>2079</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>alekshj2004</OwnerName>
     </table>
-    <table id="279" parent="264" name="uporabniki">
-      <ObjectId>90140</ObjectId>
-      <Options>autovacuum_enabled=true</Options>
-      <StateNumber>80905</StateNumber>
-      <AccessMethodId>2</AccessMethodId>
-      <OwnerName>alekshj2004</OwnerName>
-    </table>
-    <argument id="280" parent="265">
-      <ArgumentDirection>R</ArgumentDirection>
-      <DasType>void|0s</DasType>
-    </argument>
-    <argument id="281" parent="265" name="username_reg">
-      <DasType>varchar|0s</DasType>
-      <Position>1</Position>
-    </argument>
-    <argument id="282" parent="265" name="password_reg">
-      <DasType>varchar|0s</DasType>
-      <Position>2</Position>
-    </argument>
-    <argument id="283" parent="265" name="email_reg">
-      <DasType>varchar|0s</DasType>
-      <Position>3</Position>
-    </argument>
-    <argument id="284" parent="266">
-      <ArgumentDirection>R</ArgumentDirection>
-      <DasType>void|0s</DasType>
-    </argument>
-    <argument id="285" parent="266" name="username_reg">
-      <DasType>varchar|0s</DasType>
-      <Position>1</Position>
-    </argument>
-    <argument id="286" parent="266" name="password_reg">
-      <DasType>varchar|0s</DasType>
-      <Position>2</Position>
-    </argument>
-    <argument id="287" parent="266" name="email_reg">
-      <DasType>varchar|0s</DasType>
-      <Position>3</Position>
-    </argument>
-    <argument id="288" parent="267">
-      <ArgumentDirection>R</ArgumentDirection>
-      <DasType>boolean|0s</DasType>
-    </argument>
-    <argument id="289" parent="267" name="usernames">
-      <DasType>varchar|0s</DasType>
-      <Position>1</Position>
-    </argument>
-    <column id="290" parent="274" name="id">
+    <column id="277" parent="271" name="id">
       <DasType>integer|0s</DasType>
       <DefaultExpression>nextval(&apos;&quot;Igrisca_id_seq&quot;&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
@@ -4400,27 +4330,27 @@ false Zulu
       <SequenceId>24603</SequenceId>
       <TypeId>23</TypeId>
     </column>
-    <column id="291" parent="274" name="naslov">
+    <column id="278" parent="271" name="naslov">
       <DasType>varchar(200)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>2069</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="292" parent="274" name="opis">
+    <column id="279" parent="271" name="opis">
       <DasType>text|0s</DasType>
       <Position>3</Position>
       <StateNumber>2069</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="293" parent="274" name="id_kraji">
+    <column id="280" parent="271" name="id_kraji">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>2069</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="294" parent="274" name="Relationship1">
+    <foreign-key id="281" parent="271" name="Relationship1">
       <ColNames>id_kraji</ColNames>
       <ObjectId>24631</ObjectId>
       <RefColNames>id</RefColNames>
@@ -4430,7 +4360,7 @@ false Zulu
       <RefTableName>kraji</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="295" parent="274" name="PK_Igrisca">
+    <index id="282" parent="271" name="PK_Igrisca">
       <ColNames>id</ColNames>
       <ObjectId>24611</ObjectId>
       <Primary>1</Primary>
@@ -4438,19 +4368,19 @@ false Zulu
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="296" parent="274" name="IX_Relationship1">
+    <index id="283" parent="271" name="IX_Relationship1">
       <ColNames>id_kraji</ColNames>
       <ObjectId>24610</ObjectId>
       <StateNumber>2070</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="297" parent="274" name="PK_Igrisca">
+    <key id="284" parent="271" name="PK_Igrisca">
       <ObjectId>24612</ObjectId>
       <Primary>1</Primary>
       <StateNumber>2071</StateNumber>
       <UnderlyingIndexId>24611</UnderlyingIndexId>
     </key>
-    <column id="298" parent="275" name="id">
+    <column id="285" parent="272" name="id">
       <DasType>integer|0s</DasType>
       <DefaultExpression>nextval(&apos;&quot;Rezervaija_id_seq&quot;&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
@@ -4459,35 +4389,35 @@ false Zulu
       <SequenceId>24576</SequenceId>
       <TypeId>23</TypeId>
     </column>
-    <column id="299" parent="275" name="datum_rezervaije">
+    <column id="286" parent="272" name="datum_rezervaije">
       <DasType>timestamp|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>2058</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="300" parent="275" name="ura_rezervacije">
+    <column id="287" parent="272" name="ura_rezervacije">
       <DasType>timestamp|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>2058</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="301" parent="275" name="id_igrisca">
+    <column id="288" parent="272" name="id_igrisca">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>2058</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="302" parent="275" name="id_uporabniki">
+    <column id="289" parent="272" name="id_uporabniki">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StateNumber>2058</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="303" parent="275" name="Relationship6">
+    <foreign-key id="290" parent="272" name="Relationship6">
       <ColNames>id_igrisca</ColNames>
       <ObjectId>24646</ObjectId>
       <RefColNames>id</RefColNames>
@@ -4497,17 +4427,17 @@ false Zulu
       <RefTableName>Igrisca</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <foreign-key id="304" parent="275" name="Relationship7">
+    <foreign-key id="291" parent="272" name="Relationship7">
       <ColNames>id_uporabniki</ColNames>
-      <ObjectId>90148</ObjectId>
+      <ObjectId>24651</ObjectId>
       <RefColNames>id</RefColNames>
       <RefColPositions>1</RefColPositions>
-      <StateNumber>80905</StateNumber>
-      <RefTableId>90140</RefTableId>
-      <RefTableName>uporabniki</RefTableName>
+      <StateNumber>2082</StateNumber>
+      <RefTableId>24623</RefTableId>
+      <RefTableName>Uporabniki</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="305" parent="275" name="PK_Rezervaija">
+    <index id="292" parent="272" name="PK_Rezervaija">
       <ColNames>id</ColNames>
       <ObjectId>24583</ObjectId>
       <Primary>1</Primary>
@@ -4515,37 +4445,37 @@ false Zulu
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="306" parent="275" name="id">
+    <index id="293" parent="272" name="id">
       <ColNames>id</ColNames>
       <ObjectId>24585</ObjectId>
       <StateNumber>2062</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="307" parent="275" name="IX_Relationship6">
+    <index id="294" parent="272" name="IX_Relationship6">
       <ColNames>id_igrisca</ColNames>
       <ObjectId>24581</ObjectId>
       <StateNumber>2059</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="308" parent="275" name="IX_Relationship7">
+    <index id="295" parent="272" name="IX_Relationship7">
       <ColNames>id_uporabniki</ColNames>
       <ObjectId>24582</ObjectId>
       <StateNumber>2060</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="309" parent="275" name="PK_Rezervaija">
+    <key id="296" parent="272" name="PK_Rezervaija">
       <ObjectId>24584</ObjectId>
       <Primary>1</Primary>
       <StateNumber>2061</StateNumber>
       <UnderlyingIndexId>24583</UnderlyingIndexId>
     </key>
-    <key id="310" parent="275" name="id">
+    <key id="297" parent="272" name="id">
       <ObjectId>24586</ObjectId>
       <StateNumber>2062</StateNumber>
       <UnderlyingIndexId>24585</UnderlyingIndexId>
     </key>
-    <column id="311" parent="276" name="id">
+    <column id="298" parent="273" name="id">
       <DasType>integer|0s</DasType>
       <DefaultExpression>nextval(&apos;&quot;Sport_id_seq&quot;&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
@@ -4554,20 +4484,20 @@ false Zulu
       <SequenceId>24587</SequenceId>
       <TypeId>23</TypeId>
     </column>
-    <column id="312" parent="276" name="ime">
+    <column id="299" parent="273" name="ime">
       <DasType>varchar(200)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>2063</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="313" parent="276" name="opis">
+    <column id="300" parent="273" name="opis">
       <DasType>text|0s</DasType>
       <Position>3</Position>
       <StateNumber>4100</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <index id="314" parent="276" name="PK_Sport">
+    <index id="301" parent="273" name="PK_Sport">
       <ColNames>id</ColNames>
       <ObjectId>24594</ObjectId>
       <Primary>1</Primary>
@@ -4575,13 +4505,57 @@ false Zulu
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="315" parent="276" name="PK_Sport">
+    <key id="302" parent="273" name="PK_Sport">
       <ObjectId>24595</ObjectId>
       <Primary>1</Primary>
       <StateNumber>2064</StateNumber>
       <UnderlyingIndexId>24594</UnderlyingIndexId>
     </key>
-    <column id="316" parent="277" name="id">
+    <column id="303" parent="274" name="id">
+      <DasType>integer|0s</DasType>
+      <DefaultExpression>nextval(&apos;&quot;Uporabniki_id_seq&quot;&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>2076</StateNumber>
+      <SequenceId>24622</SequenceId>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="304" parent="274" name="username">
+      <DasType>varchar(200)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>2076</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="305" parent="274" name="password">
+      <DasType>varchar(200)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StateNumber>2076</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="306" parent="274" name="email">
+      <DasType>varchar(200)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StateNumber>2076</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="307" parent="274" name="PK_Uporabniki">
+      <ColNames>id</ColNames>
+      <ObjectId>24629</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>2077</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="308" parent="274" name="PK_Uporabniki">
+      <ObjectId>24630</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>2077</StateNumber>
+      <UnderlyingIndexId>24629</UnderlyingIndexId>
+    </key>
+    <column id="309" parent="275" name="id">
       <DasType>integer|0s</DasType>
       <DefaultExpression>nextval(&apos;&quot;Kraji_id_seq&quot;&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
@@ -4590,21 +4564,21 @@ false Zulu
       <SequenceId>24596</SequenceId>
       <TypeId>23</TypeId>
     </column>
-    <column id="317" parent="277" name="ime">
+    <column id="310" parent="275" name="ime">
       <DasType>varchar(200)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>2067</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="318" parent="277" name="postna_st">
+    <column id="311" parent="275" name="postna_st">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>3078</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <index id="319" parent="277" name="PK_Kraji">
+    <index id="312" parent="275" name="PK_Kraji">
       <ColNames>id</ColNames>
       <ObjectId>24601</ObjectId>
       <Primary>1</Primary>
@@ -4612,13 +4586,13 @@ false Zulu
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="320" parent="277" name="PK_Kraji">
+    <key id="313" parent="275" name="PK_Kraji">
       <ObjectId>24602</ObjectId>
       <Primary>1</Primary>
       <StateNumber>2068</StateNumber>
       <UnderlyingIndexId>24601</UnderlyingIndexId>
     </key>
-    <column id="321" parent="278" name="id">
+    <column id="314" parent="276" name="id">
       <DasType>integer|0s</DasType>
       <DefaultExpression>nextval(&apos;sport_igrisce_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
@@ -4627,21 +4601,21 @@ false Zulu
       <SequenceId>24613</SequenceId>
       <TypeId>23</TypeId>
     </column>
-    <column id="322" parent="278" name="id_sport">
+    <column id="315" parent="276" name="id_sport">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>2072</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="323" parent="278" name="id_igrisca">
+    <column id="316" parent="276" name="id_igrisca">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>2072</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="324" parent="278" name="Relationship3">
+    <foreign-key id="317" parent="276" name="Relationship3">
       <ColNames>id_sport</ColNames>
       <ObjectId>24636</ObjectId>
       <RefColNames>id</RefColNames>
@@ -4651,7 +4625,7 @@ false Zulu
       <RefTableName>Sport</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <foreign-key id="325" parent="278" name="Relationship4">
+    <foreign-key id="318" parent="276" name="Relationship4">
       <ColNames>id_igrisca</ColNames>
       <ObjectId>24641</ObjectId>
       <RefColNames>id</RefColNames>
@@ -4661,7 +4635,7 @@ false Zulu
       <RefTableName>Igrisca</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="326" parent="278" name="PK_sport_igrisce">
+    <index id="319" parent="276" name="PK_sport_igrisce">
       <ColNames>id</ColNames>
       <ObjectId>24620</ObjectId>
       <Primary>1</Primary>
@@ -4669,67 +4643,23 @@ false Zulu
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="327" parent="278" name="IX_Relationship3">
+    <index id="320" parent="276" name="IX_Relationship3">
       <ColNames>id_sport</ColNames>
       <ObjectId>24618</ObjectId>
       <StateNumber>2073</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="328" parent="278" name="IX_Relationship4">
+    <index id="321" parent="276" name="IX_Relationship4">
       <ColNames>id_igrisca</ColNames>
       <ObjectId>24619</ObjectId>
       <StateNumber>2074</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="329" parent="278" name="PK_sport_igrisce">
+    <key id="322" parent="276" name="PK_sport_igrisce">
       <ObjectId>24621</ObjectId>
       <Primary>1</Primary>
       <StateNumber>2075</StateNumber>
       <UnderlyingIndexId>24620</UnderlyingIndexId>
-    </key>
-    <column id="330" parent="279" name="id">
-      <DasType>integer|0s</DasType>
-      <DefaultExpression>nextval(&apos;uporabniki_id_seq&apos;::regclass)</DefaultExpression>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StateNumber>80903</StateNumber>
-      <SequenceId>90139</SequenceId>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="331" parent="279" name="username">
-      <DasType>varchar(200)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StateNumber>80903</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="332" parent="279" name="password">
-      <DasType>varchar(200)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-      <StateNumber>80903</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="333" parent="279" name="email">
-      <DasType>varchar(200)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-      <StateNumber>80903</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <index id="334" parent="279" name="PK_uporabniki">
-      <ColNames>id</ColNames>
-      <ObjectId>90146</ObjectId>
-      <Primary>1</Primary>
-      <StateNumber>80904</StateNumber>
-      <Unique>1</Unique>
-      <AccessMethodId>403</AccessMethodId>
-    </index>
-    <key id="335" parent="279" name="PK_uporabniki">
-      <ObjectId>90147</ObjectId>
-      <Primary>1</Primary>
-      <StateNumber>80904</StateNumber>
-      <UnderlyingIndexId>90146</UnderlyingIndexId>
     </key>
   </database-model>
 </dataSource>
