@@ -1,5 +1,5 @@
 public class Main {
     public static void main(String[] args) {
-        RegPage reg = new RegPage();
+        System.out.println("Hello world!");
     }
 }
