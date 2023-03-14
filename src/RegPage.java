@@ -37,5 +37,6 @@ public class RegPage {
         frame.setSize(600,500);
         frame.setVisible(true);
 
-        connect();    }
+        connect();
+    }
 }
