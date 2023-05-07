@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="neondb" uuid="ad6229f7-4293-4640-a168-8c1a799e2404">
+    <data-source source="LOCAL" name="neon" uuid="10e94911-725d-44a4-b321-a83ff7682110">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
