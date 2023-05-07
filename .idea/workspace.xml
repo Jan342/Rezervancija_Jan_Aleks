@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdfd5564-457c-4c72-a0ed-7c853bc0ffbc" name="Changes" comment="" />
+    <list default="true" id="cdfd5564-457c-4c72-a0ed-7c853bc0ffbc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/postgresql_42_6_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoginPage.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,6 +56,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "296",
     "WebServerToolWindowFactoryState": "false",
     "import_schema_mapping": "<schema-mapping>\n  <databases>\n    <list>\n      <schema-mapping-item>\n        <source-data-source-id>ad6229f7-4293-4640-a168-8c1a799e2404</source-data-source-id>\n        <source-path>database/&quot;neondb&quot;/schema/&quot;public&quot;</source-path>\n        <target-data-source-id>ad6229f7-4293-4640-a168-8c1a799e2404</target-data-source-id>\n        <target-path>database/&quot;neondb&quot;/schema/&quot;public&quot;</target-path>\n      </schema-mapping-item>\n    </list>\n  </databases>\n</schema-mapping>",
@@ -60,6 +65,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -89,6 +95,7 @@
       <workItem from="1683049300596" duration="712000" />
       <workItem from="1683451554810" duration="597000" />
       <workItem from="1683452175116" duration="2471000" />
+      <workItem from="1683463898709" duration="4135000" />
     </task>
     <task id="LOCAL-00001" summary="Registracija začetek kode">
       <created>1678783797753</created>
@@ -126,7 +133,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="Registracija" />
+                        <option value="origin/master" />
                       </list>
                     </value>
                   </entry>

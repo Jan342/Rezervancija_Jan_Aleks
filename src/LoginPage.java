@@ -175,7 +175,6 @@ public class LoginPage extends JFrame implements ActionListener {
 
         private boolean updatePasswordInDatabase(String username, String newPassword) {
 
-            PreparedStatement stmt = null;
             int rowsAffected = 0;
 
             try {
@@ -183,7 +182,7 @@ public class LoginPage extends JFrame implements ActionListener {
 
                 // Create an SQL update statement
                 String sql = "UPDATE uporabniki SET password = ? WHERE username = ?";
-                stmt = con.prepareStatement(sql);
+                stmt = con.prepareCall(sql);
                 stmt.setString(1, newPassword);
                 stmt.setString(2, username);
 
@@ -213,40 +212,43 @@ public class LoginPage extends JFrame implements ActionListener {
         }
     }
     public void actionPerformed(ActionEvent e) {
-       if (e.getSource() == submitButton) {
-            String username = usernameText.getText();
-            String password = passwordText.getText();
-            if (username.equals("admin") && password.equals("admin123")) {
-                messageLabel.setText("Login successful!");
-            } else {
-                messageLabel.setText("Invalid username or password");
-            }
+        if (e.getSource() == submitButton) {
+            // ... (existing login logic)
         } else if (e.getSource() == ChangePassword) {
             showChangePasswordDialog();
         } else {
             usernameText.setText("");
             passwordText.setText("");
         }
+        if (e.getSource() == submitButton) {
+            String username = usernameText.getText();
+            String password = passwordText.getText();
+            if (validateLogin(username, password)) {
+                // Login successful, open the izbiraPage form
+                new IzbiraPage();
+                dispose(); // close the current login page form
+            } else if (username.equals("admin") && password.equals("123")) {
+                messageLabel.setText("Logged in as admin!");
+            } else {
+                messageLabel.setText("Invalid username or password");
+            }
+        } else {
+            usernameText.setText("");
+            passwordText.setText("");
+        }
     }
-/*   public boolean validateLogin(String username, String password) {
-        Connection conn = null;
-        CallableStatement stmt = null;
+
+  public boolean validateLogin(String username, String password) {
+
         ResultSet rs = null;
         boolean isValid = false;
 
         try {
-            // Register JDBC driver
-            Class.forName("org.postgresql.Driver");
-
-            // Open a connection
-            String dbUrl = "jdbc:postgres://alekshj2004:ZMmQk5fyAKx4@ep-lingering-grass-902680.eu-central-1.aws.neon.tech/neondb";
-            String dbUser = "alekshj2004";
-            String dbPassword = "ZMmQk5fyAKx4";
-            conn = DriverManager.getConnection(dbUrl, dbUser, dbPassword);
+          connect();
 
             // Prepare a call to the validate_login function
             String sql = "{ ? = call validate_login(?, ?) }";
-            stmt = conn.prepareCall(sql);
+            stmt = con.prepareCall(sql);
             stmt.registerOutParameter(1, Types.BOOLEAN);
             stmt.setString(2, username);
             stmt.setString(3, password);
@@ -273,14 +275,14 @@ public class LoginPage extends JFrame implements ActionListener {
                 se.printStackTrace();
             }
             try {
-                if (conn != null) conn.close();
+                if (con != null) con.close();
             } catch (SQLException se) {
                 se.printStackTrace();
             }
         }
 
         return isValid;
-    }*/
+    }
     public static void main(String[] args) {
         new LoginPage();
     }
