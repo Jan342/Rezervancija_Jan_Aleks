@@ -5,15 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdfd5564-457c-4c72-a0ed-7c853bc0ffbc" name="Changes" comment="Registracija koncana">
+      <change afterPath="$PROJECT_DIR$/src/IzbiraPage.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/IzbiraPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OdlocitevPage.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OdlocitevPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ad6229f7-4293-4640-a168-8c1a799e2404.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ad6229f7-4293-4640-a168-8c1a799e2404.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ad6229f7-4293-4640-a168-8c1a799e2404/storage_v2/_src_/database/neondb.1Hh4wQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ad6229f7-4293-4640-a168-8c1a799e2404/storage_v2/_src_/database/neondb.1Hh4wQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/postgresql_42_6_0.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rezervacija.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Rezervacija.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Rezervancija_Jan_Aleks.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Rezervancija_Jan_Aleks.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RegPage.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/RegPage.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RegPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RegPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LoginPage.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoginPage.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoginPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +55,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2MzsrAoYHjLc4AaHGNmxEWNi9sc" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -65,7 +70,7 @@
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "296",
     "WebServerToolWindowFactoryState": "false",
     "import_schema_mapping": "<schema-mapping>\n  <databases>\n    <list>\n      <schema-mapping-item>\n        <source-data-source-id>ad6229f7-4293-4640-a168-8c1a799e2404</source-data-source-id>\n        <source-path>database/&quot;neondb&quot;/schema/&quot;public&quot;</source-path>\n        <target-data-source-id>ad6229f7-4293-4640-a168-8c1a799e2404</target-data-source-id>\n        <target-path>database/&quot;neondb&quot;/schema/&quot;public&quot;</target-path>\n      </schema-mapping-item>\n    </list>\n  </databases>\n</schema-mapping>",
-    "last_opened_file_path": "C:/Users/Jan/Desktop/postgresql-42.6.0.jar",
+    "last_opened_file_path": "C:/Users/AleksHJ/Desktop/postgresql-42.6.0",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -129,7 +134,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="Registracija" />
+                        <option value="origin/master" />
                       </list>
                     </value>
                   </entry>
