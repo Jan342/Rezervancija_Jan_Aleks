@@ -63,8 +63,6 @@ public class RegPage {
                     return;
                 }
 
-
-
                 try{
                     pst = con.prepareStatement("insert into uporabniki (username, password, email) values(?,?,?)");
                     pst.setString(1,name);
@@ -84,6 +82,16 @@ public class RegPage {
 
                 }
 
+                new LoginPage();
+                frame.dispose();
+
+            }
+        });
+        loginButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                new LoginPage();
+                frame.dispose();
             }
         });
     }

@@ -4,10 +4,15 @@ import java.awt.event.*;
 import java.sql.*;
 
 public class LoginPage extends JFrame implements ActionListener {
-    private JLabel loginLabel, usernameLabel, passwordLabel, messageLabel;
+    private JLabel Password, LoginPage, usernameLabel, messageLabel;
     private JTextField usernameText, passwordText;
     private JButton submitButton;
     private JButton ChangePassword;
+    private JButton Login;
+    private JPanel panel2;
+    private JFrame frame;
+
+
     Connection con;
     PreparedStatement pst;
     CallableStatement stmt = null;
@@ -29,25 +34,31 @@ public class LoginPage extends JFrame implements ActionListener {
         }
     }
     public LoginPage() {
-        loginLabel = new JLabel("Login");
+       /* LoginPage = new JLabel("Login");
         usernameLabel = new JLabel("Username:");
-        passwordLabel = new JLabel("Password:");
+        Password = new JLabel("Password:");
         messageLabel = new JLabel("");
         usernameText = new JTextField(20);
         passwordText = new JPasswordField(20);
         submitButton = new JButton("Submit");
         ChangePassword = new JButton("Change Password");
+        Login = new JButton("Login");*/
         submitButton.addActionListener(this);
         ChangePassword.addActionListener(this);
+        frame = new JFrame("empRegistration");
+        frame.setContentPane(panel2);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setSize(600,500);
+        frame.setVisible(true);
 
 
-
-        JPanel panel = new JPanel(new GridLayout(4, 2));
-        panel.add(loginLabel);
+  /*      JPanel panel = new JPanel(new GridLayout(4, 2));
+        panel.add(LoginPage);
         panel.add(new JLabel(""));
         panel.add(usernameLabel);
         panel.add(usernameText);
-        panel.add(passwordLabel);
+        panel.add(Password);
         panel.add(passwordText);
         panel.add(submitButton);
         panel.add(ChangePassword);
@@ -57,10 +68,17 @@ public class LoginPage extends JFrame implements ActionListener {
 
         add(panel, BorderLayout.CENTER);
         setTitle("Login Page");
-        setSize(400, 200);
+        setSize(600, 500);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
-
+*/
+        Login.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                dispose();
+                new RegPage();
+            }
+        });
     }
     private void showChangePasswordDialog() {
         JDialog changePasswordDialog = new JDialog(this, "Change Password", true);
