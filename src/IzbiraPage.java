@@ -25,6 +25,7 @@ public class IzbiraPage {
         frame.add(sportBox);
 
         frame.pack();
+        frame.setSize(600,500);
         frame.setVisible(true);
 
         loadMesta();

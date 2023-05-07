@@ -5,11 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdfd5564-457c-4c72-a0ed-7c853bc0ffbc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/rs2xml.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AdminPanel1.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AdminPanel1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LoginPage.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoginPage.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rezervacija.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Rezervacija.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/IzbiraPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/IzbiraPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RegPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RegPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +65,7 @@
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "296",
     "WebServerToolWindowFactoryState": "false",
     "import_schema_mapping": "<schema-mapping>\n  <databases>\n    <list>\n      <schema-mapping-item>\n        <source-data-source-id>ad6229f7-4293-4640-a168-8c1a799e2404</source-data-source-id>\n        <source-path>database/&quot;neondb&quot;/schema/&quot;public&quot;</source-path>\n        <target-data-source-id>ad6229f7-4293-4640-a168-8c1a799e2404</target-data-source-id>\n        <target-path>database/&quot;neondb&quot;/schema/&quot;public&quot;</target-path>\n      </schema-mapping-item>\n    </list>\n  </databases>\n</schema-mapping>",
-    "last_opened_file_path": "C:/Users/Jan/Desktop/postgresql-42.6.0.jar",
+    "last_opened_file_path": "C:/Users/Jan/Desktop/rs2xml.jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -97,7 +100,10 @@
       <workItem from="1683049300596" duration="712000" />
       <workItem from="1683451554810" duration="597000" />
       <workItem from="1683452175116" duration="2471000" />
-      <workItem from="1683463898709" duration="5877000" />
+      <workItem from="1683463898709" duration="7667000" />
+      <workItem from="1683484621487" duration="147000" />
+      <workItem from="1683484828664" duration="844000" />
+      <workItem from="1683486542394" duration="3356000" />
     </task>
     <task id="LOCAL-00001" summary="Registracija začetek kode">
       <created>1678783797753</created>
@@ -120,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683470103123</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Visualno polepšal">
+      <created>1683471853673</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1683471853673</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,6 +171,7 @@
     <MESSAGE value="Registracija začetek kode" />
     <MESSAGE value="LOGIN dodal change password" />
     <MESSAGE value="Dodal da te vrze na drugo stran" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dodal da te vrze na drugo stran" />
+    <MESSAGE value="Visualno polepšal" />
+    <option name="LAST_COMMIT_MESSAGE" value="Visualno polepšal" />
   </component>
 </project>

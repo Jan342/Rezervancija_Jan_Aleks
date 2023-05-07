@@ -1,5 +1,5 @@
 public class Main {
     public static void main(String[] args) {
-        RegPage kih = new RegPage();
+        AdminPanel1 kih = new AdminPanel1();
     }
 }

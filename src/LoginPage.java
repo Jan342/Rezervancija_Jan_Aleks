@@ -93,20 +93,20 @@ public class LoginPage extends JFrame implements ActionListener {
 
     public class ChangePasswordPanel extends JPanel {
         private JLabel usernameLabel;
-        private JLabel currentPasswordLabel;
+        private JLabel currentEmailLabel;
         private JLabel newPasswordLabel;
         private JTextField usernameText;
-        private JPasswordField currentPasswordText;
+        private JTextField currentEmailText;
         private JPasswordField newPasswordText;
         private JButton SubmitButton;
         private JLabel messageLabel;
 
         public ChangePasswordPanel() {
             usernameLabel = new JLabel("username");
-            currentPasswordLabel = new JLabel("Current Password:");
+            currentEmailLabel = new JLabel("Current Email:");
             newPasswordLabel = new JLabel("New Password:");
             usernameText = new JTextField(20);
-            currentPasswordText = new JPasswordField(20);
+            currentEmailText = new JTextField(20);
             newPasswordText = new JPasswordField(20);
             SubmitButton = new JButton("Submit");
             messageLabel = new JLabel("");
@@ -121,8 +121,8 @@ public class LoginPage extends JFrame implements ActionListener {
             setLayout(new GridLayout(5, 2));
             add(usernameLabel);
             add(usernameText);
-            add(currentPasswordLabel);
-            add(currentPasswordText);
+            add(currentEmailLabel);
+            add(currentEmailText);
             add(newPasswordLabel);
             add(newPasswordText);
             add(SubmitButton);
@@ -132,10 +132,10 @@ public class LoginPage extends JFrame implements ActionListener {
 
         private void changePassword() {
             String username = usernameText.getText();
-            String currentPassword = new String(currentPasswordText.getPassword());
+            String currentEmail = currentEmailText.getText();
             String newPassword = new String(newPasswordText.getPassword());
 
-            if (ValidateLogin(username, currentPassword)) {
+            if (ValidateLogin(username, currentEmail)) {
                 if (updatePasswordInDatabase(username, newPassword)) {
                     messageLabel.setText("Password changed successfully!");
                 } else {
@@ -146,7 +146,7 @@ public class LoginPage extends JFrame implements ActionListener {
             }
         }
 
-        private boolean ValidateLogin(String username, String password) {
+        private boolean ValidateLogin(String username, String email) {
 
             ResultSet rs = null;
             boolean isValid = false;
@@ -154,11 +154,11 @@ public class LoginPage extends JFrame implements ActionListener {
             try {
                 connect();
                 // Prepare a call to the validate_login function
-                String sql = "{ ? = call validate_login(?, ?) }";
+                String sql = "{ ? = call validate_changePassword(?, ?) }";
                 stmt = con.prepareCall(sql);
                 stmt.registerOutParameter(1, Types.BOOLEAN);
                 stmt.setString(2, username);
-                stmt.setString(3, password);
+                stmt.setString(3, email);
 
                 // Execute the call and get the result
                 stmt.execute();
