@@ -52,14 +52,17 @@ public class RegPage {
 
                 String name,email,pass,confirmPass;
 
-
-                email = emailText.getText();
-                name= userText.getText();
-                pass = passText.getText();
-                confirmPass = confpassText.getText();
+                    email = emailText.getText();
+                    name = userText.getText();
+                    pass = passText.getText();
+                    confirmPass = confpassText.getText();
 
                 if (!pass.equals(confirmPass)) {
                     JOptionPane.showMessageDialog(null, "Passwords do not match!");
+                    return;
+                }
+                if(name.isEmpty()) {
+                    JOptionPane.showMessageDialog(null, "Did not insert username");
                     return;
                 }
 
@@ -84,6 +87,7 @@ public class RegPage {
 
                 new LoginPage();
                 frame.dispose();
+
 
             }
         });

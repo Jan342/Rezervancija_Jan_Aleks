@@ -5,7 +5,9 @@
     <constraints>
       <xy x="20" y="20" width="515" height="400"/>
     </constraints>
-    <properties/>
+    <properties>
+      <background color="-1"/>
+    </properties>
     <border type="none"/>
     <children>
       <scrollpane id="6b22e">
@@ -51,6 +53,7 @@
         </constraints>
         <properties>
           <font name="Arial Black" size="24" style="1"/>
+          <foreground color="-10461088"/>
           <text value="ADMIN VIEW REZERVACIJE"/>
         </properties>
       </component>

@@ -5,7 +5,8 @@ import java.sql.*;
 
 public class LoginPage extends JFrame implements ActionListener {
     private JLabel Password, LoginPage, usernameLabel, messageLabel;
-    private JTextField usernameText, passwordText;
+    private JTextField usernameText;
+    private JPasswordField passwordText;
     private JButton submitButton;
     private JButton ChangePassword;
     private JButton Login;
@@ -245,7 +246,7 @@ public class LoginPage extends JFrame implements ActionListener {
                 // Login successful, open the izbiraPage form
                 new IzbiraPage();
                 dispose(); // close the current login page form
-            } else if (username.equals("admin") && password.equals("123")) {
+            } else if (username.equals("admin") && password.equals("1234")) {
                 messageLabel.setText("Logged in as admin!");
                 new AdminView();
                 dispose();
