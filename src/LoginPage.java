@@ -4,6 +4,9 @@ import java.awt.event.*;
 import java.sql.*;
 
 public class LoginPage extends JFrame implements ActionListener {
+
+    private int userId;
+
     private JLabel loginLabel, usernameLabel, passwordLabel, messageLabel;
     private JTextField usernameText, passwordText;
     private JButton submitButton;
@@ -11,7 +14,50 @@ public class LoginPage extends JFrame implements ActionListener {
     Connection con;
     PreparedStatement pst;
     CallableStatement stmt = null;
+    private boolean ValidateLogin(String username, String email) {
 
+        ResultSet rs = null;
+        boolean isValid = false;
+
+        try {
+            connect();
+            // Prepare a call to the validate_login function
+            String sql = "{ ? = call validate_changePassword(?, ?) }";
+            stmt = con.prepareCall(sql);
+            stmt.registerOutParameter(1, Types.BOOLEAN);
+            stmt.setString(2, username);
+            stmt.setString(3, email);
+
+            // Execute the call and get the result
+            stmt.execute();
+            isValid = stmt.getBoolean(1);
+        } catch (SQLException se) {
+            // Handle errors for JDBC
+            se.printStackTrace();
+        } catch (Exception ex) {
+            // Handle errors for Class.forName
+            ex.printStackTrace();
+        } finally {
+            // Close resources
+            try {
+                if (rs != null) rs.close();
+            } catch (SQLException se) {
+                se.printStackTrace();
+            }
+            try {
+                if (stmt != null) stmt.close();
+            } catch (SQLException se) {
+                se.printStackTrace();
+            }
+            try {
+                if (con != null) con.close();
+            } catch (SQLException se) {
+                se.printStackTrace();
+            }
+        }
+
+        return isValid;
+    }
     public void connect() {
         try {
             Class.forName("org.postgresql.Driver");
@@ -117,7 +163,8 @@ public class LoginPage extends JFrame implements ActionListener {
             String currentPassword = new String(currentPasswordText.getPassword());
             String newPassword = new String(newPasswordText.getPassword());
 
-            if (ValidateLogin(username, currentPassword)) {
+            int userId = validateLogin(username, currentPassword);
+            if (userId != 0) {
                 if (updatePasswordInDatabase(username, newPassword)) {
                     messageLabel.setText("Password changed successfully!");
                 } else {
@@ -128,50 +175,6 @@ public class LoginPage extends JFrame implements ActionListener {
             }
         }
 
-        private boolean ValidateLogin(String username, String password) {
-
-            ResultSet rs = null;
-            boolean isValid = false;
-
-            try {
-                connect();
-                // Prepare a call to the validate_login function
-                String sql = "{ ? = call validate_login(?, ?) }";
-                stmt = con.prepareCall(sql);
-                stmt.registerOutParameter(1, Types.BOOLEAN);
-                stmt.setString(2, username);
-                stmt.setString(3, password);
-
-                // Execute the call and get the result
-                stmt.execute();
-                isValid = stmt.getBoolean(1);
-            } catch (SQLException se) {
-                // Handle errors for JDBC
-                se.printStackTrace();
-            } catch (Exception ex) {
-                // Handle errors for Class.forName
-                ex.printStackTrace();
-            } finally {
-                // Close resources
-                try {
-                    if (rs != null) rs.close();
-                } catch (SQLException se) {
-                    se.printStackTrace();
-                }
-                try {
-                    if (stmt != null) stmt.close();
-                } catch (SQLException se) {
-                    se.printStackTrace();
-                }
-                try {
-                    if (con != null) con.close();
-                } catch (SQLException se) {
-                    se.printStackTrace();
-                }
-            }
-
-            return isValid;
-        }
 
         private boolean updatePasswordInDatabase(String username, String newPassword) {
 
@@ -213,11 +216,14 @@ public class LoginPage extends JFrame implements ActionListener {
         }
     }
     public void actionPerformed(ActionEvent e) {
-       if (e.getSource() == submitButton) {
+        if (e.getSource() == submitButton) {
             String username = usernameText.getText();
             String password = passwordText.getText();
-            if (username.equals("admin") && password.equals("admin123")) {
+            int userId = validateLogin(username, password);
+            if (userId != 0) {
                 messageLabel.setText("Login successful!");
+                SwingUtilities.invokeLater(() -> new IzbiraPage(userId));
+                this.dispose(); // Close the login window
             } else {
                 messageLabel.setText("Invalid username or password");
             }
@@ -227,33 +233,25 @@ public class LoginPage extends JFrame implements ActionListener {
             usernameText.setText("");
             passwordText.setText("");
         }
-    }
-/*   public boolean validateLogin(String username, String password) {
-        Connection conn = null;
-        CallableStatement stmt = null;
+    } private int validateLogin(String username, String password) {
         ResultSet rs = null;
-        boolean isValid = false;
+
+        int userId = 0;
 
         try {
-            // Register JDBC driver
-            Class.forName("org.postgresql.Driver");
-
-            // Open a connection
-            String dbUrl = "jdbc:postgres://alekshj2004:ZMmQk5fyAKx4@ep-lingering-grass-902680.eu-central-1.aws.neon.tech/neondb";
-            String dbUser = "alekshj2004";
-            String dbPassword = "ZMmQk5fyAKx4";
-            conn = DriverManager.getConnection(dbUrl, dbUser, dbPassword);
-
+            connect();
             // Prepare a call to the validate_login function
-            String sql = "{ ? = call validate_login(?, ?) }";
-            stmt = conn.prepareCall(sql);
-            stmt.registerOutParameter(1, Types.BOOLEAN);
+            String sql = "{ ? = call validate_login_1(?, ?) }";
+            stmt = con.prepareCall(sql);
+            stmt.registerOutParameter(1, Types.INTEGER);
             stmt.setString(2, username);
             stmt.setString(3, password);
 
-            // Execute the call and get the result
+            // Execute the call
             stmt.execute();
-            isValid = stmt.getBoolean(1);
+
+            // Get the result
+            userId = stmt.getInt(1);
         } catch (SQLException se) {
             // Handle errors for JDBC
             se.printStackTrace();
@@ -273,14 +271,15 @@ public class LoginPage extends JFrame implements ActionListener {
                 se.printStackTrace();
             }
             try {
-                if (conn != null) conn.close();
+                if (con != null) con.close();
             } catch (SQLException se) {
                 se.printStackTrace();
             }
         }
 
-        return isValid;
-    }*/
+        return userId;
+    }
+
     public static void main(String[] args) {
         new LoginPage();
     }
