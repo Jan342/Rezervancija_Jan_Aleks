@@ -53,6 +53,7 @@ public class IzbiraPage extends JFrame {
         frame.add(new JLabel("Igrisce:"));
         frame.add(igriscaBox);
         frame.pack();
+        frame.setSize(600,500);
         frame.setVisible(true);
 
         loadMesta();
