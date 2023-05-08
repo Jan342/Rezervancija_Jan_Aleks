@@ -244,7 +244,7 @@ public class LoginPage extends JFrame implements ActionListener {
             String password = passwordText.getText();
             if (validateLogin(username, password)) {
                 // Login successful, open the izbiraPage form
-                new IzbiraPage();
+                new IzbiraPage(IzbiraPage.userId);
                 dispose(); // close the current login page form
             } else if (username.equals("admin") && password.equals("1234")) {
                 messageLabel.setText("Logged in as admin!");
