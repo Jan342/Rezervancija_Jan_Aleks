@@ -6,13 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cdfd5564-457c-4c72-a0ed-7c853bc0ffbc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AdminPanel1.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdminPanel1.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AdminPanel2.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdminPanel2.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AdminView.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdminView.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LoginPage.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoginPage.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RegPage.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/RegPage.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RegPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RegPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AdminPanel2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdminPanel2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683562901956</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Končal s polepšanjem login register adminview adminpanel1 in adminpanel2 strani.">
+      <created>1683567775916</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1683567775916</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,7 +192,8 @@
     <MESSAGE value="Visualno polepšal" />
     <MESSAGE value="Zadnji commit dneva dodan AdminPanel1 nedokončan,&#10;Popravil changepassword" />
     <MESSAGE value="AdminPanel2 rezervacija admin panel je končana. Admin del je končan!" />
-    <option name="LAST_COMMIT_MESSAGE" value="AdminPanel2 rezervacija admin panel je končana. Admin del je končan!" />
+    <MESSAGE value="Končal s polepšanjem login register adminview adminpanel1 in adminpanel2 strani." />
+    <option name="LAST_COMMIT_MESSAGE" value="Končal s polepšanjem login register adminview adminpanel1 in adminpanel2 strani." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Rezervancija_Jan_Aleks$Main.ic" NAME="Main Coverage Results" MODIFIED="1683550642719" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

@@ -32,6 +32,7 @@ public class AdminPanel2 {
         frame.setVisible(true);
 
         connect();
+        table_load();
         searchButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
