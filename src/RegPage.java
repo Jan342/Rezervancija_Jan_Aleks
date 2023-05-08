@@ -1,3 +1,5 @@
+import org.mindrot.jbcrypt.BCrypt;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -54,7 +56,8 @@ public class RegPage {
 
                     email = emailText.getText();
                     name = userText.getText();
-                    pass = passText.getText();
+                pass = passText.getText();
+                String hashedPass = BCrypt.hashpw(pass, BCrypt.gensalt());
                     confirmPass = confpassText.getText();
 
                 if (!pass.equals(confirmPass)) {
@@ -69,7 +72,7 @@ public class RegPage {
                 try{
                     pst = con.prepareStatement("insert into uporabniki (username, password, email) values(?,?,?)");
                     pst.setString(1,name);
-                    pst.setString(2, pass);
+                    pst.setString(2, hashedPass);
                     pst.setString(3,email);
                     pst.executeUpdate();
                     JOptionPane.showMessageDialog(null,"Registered!");

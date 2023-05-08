@@ -1,3 +1,5 @@
+import org.mindrot.jbcrypt.BCrypt;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -35,15 +37,7 @@ public class LoginPage extends JFrame implements ActionListener {
         }
     }
     public LoginPage() {
-       /* LoginPage = new JLabel("Login");
-        usernameLabel = new JLabel("Username:");
-        Password = new JLabel("Password:");
-        messageLabel = new JLabel("");
-        usernameText = new JTextField(20);
-        passwordText = new JPasswordField(20);
-        submitButton = new JButton("Submit");
-        ChangePassword = new JButton("Change Password");
-        Login = new JButton("Login");*/
+
         submitButton.addActionListener(this);
         ChangePassword.addActionListener(this);
         frame = new JFrame("empRegistration");
@@ -54,25 +48,6 @@ public class LoginPage extends JFrame implements ActionListener {
         frame.setVisible(true);
 
 
-  /*      JPanel panel = new JPanel(new GridLayout(4, 2));
-        panel.add(LoginPage);
-        panel.add(new JLabel(""));
-        panel.add(usernameLabel);
-        panel.add(usernameText);
-        panel.add(Password);
-        panel.add(passwordText);
-        panel.add(submitButton);
-        panel.add(ChangePassword);
-
-
-        panel.add(messageLabel);
-
-        add(panel, BorderLayout.CENTER);
-        setTitle("Login Page");
-        setSize(600, 500);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setVisible(true);
-*/
         Login.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
@@ -232,51 +207,54 @@ public class LoginPage extends JFrame implements ActionListener {
     }
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == submitButton) {
-            // ... (existing login logic)
+            String username = usernameText.getText();
+            String password = passwordText.getText();
+            int userId = validateLogin(username, password);
+            if (userId != 0) {
+                messageLabel.setText("Login successful!");
+                SwingUtilities.invokeLater(() -> new IzbiraPage(userId));
+                this.dispose(); // Close the login window
+            }else if(username.equals("admin") && password.equals("1234")){
+                new AdminView();
+                this.dispose();
+            }
+            else{
+                messageLabel.setText("Invalid username or password");
+            }
         } else if (e.getSource() == ChangePassword) {
             showChangePasswordDialog();
         } else {
             usernameText.setText("");
             passwordText.setText("");
         }
-        if (e.getSource() == submitButton) {
-            String username = usernameText.getText();
-            String password = passwordText.getText();
-            if (validateLogin(username, password)) {
-                // Login successful, open the izbiraPage form
-                new IzbiraPage(IzbiraPage.userId);
-                dispose(); // close the current login page form
-            } else if (username.equals("admin") && password.equals("1234")) {
-                messageLabel.setText("Logged in as admin!");
-                new AdminView();
-                dispose();
-            } else {
-                messageLabel.setText("Invalid username or password");
-            }
-        } else {
-            usernameText.setText("");
-            passwordText.setText("");
-        }
     }
 
-  public boolean validateLogin(String username, String password) {
-
-        ResultSet rs = null;
-        boolean isValid = false;
+    private int validateLogin(String username, String password) {
+        int userId = 0;
+        String storedHash = "";
 
         try {
-          connect();
+            connect();
 
-            // Prepare a call to the validate_login function
-            String sql = "{ ? = call validate_login(?, ?) }";
-            stmt = con.prepareCall(sql);
-            stmt.registerOutParameter(1, Types.BOOLEAN);
-            stmt.setString(2, username);
-            stmt.setString(3, password);
+            // Get the stored password hash
+            String sql = "SELECT id, password FROM uporabniki WHERE username = ?";
+            PreparedStatement pstmt = con.prepareStatement(sql);
+            pstmt.setString(1, username);
+            ResultSet rs = pstmt.executeQuery();
 
-            // Execute the call and get the result
-            stmt.execute();
-            isValid = stmt.getBoolean(1);
+            if (rs.next()) {
+                userId = rs.getInt("id");
+                storedHash = rs.getString("password");
+            }
+
+            // Close resources
+            pstmt.close();
+            rs.close();
+
+            // Verify the password
+            if (!BCrypt.checkpw(password, storedHash)) {
+                userId = 0;
+            }
         } catch (SQLException se) {
             // Handle errors for JDBC
             se.printStackTrace();
@@ -285,11 +263,6 @@ public class LoginPage extends JFrame implements ActionListener {
             ex.printStackTrace();
         } finally {
             // Close resources
-            try {
-                if (rs != null) rs.close();
-            } catch (SQLException se) {
-                se.printStackTrace();
-            }
             try {
                 if (stmt != null) stmt.close();
             } catch (SQLException se) {
@@ -302,7 +275,7 @@ public class LoginPage extends JFrame implements ActionListener {
             }
         }
 
-        return isValid;
+        return userId;
     }
     public static void main(String[] args) {
         new LoginPage();

@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdfd5564-457c-4c72-a0ed-7c853bc0ffbc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/jbcrypt_0_4.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AdminPanel2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdminPanel2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rezervacija.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Rezervacija.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AdminPanel1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdminPanel1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PogledPage.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/PogledPage.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RegPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RegPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +30,7 @@
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="AdminView" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -57,11 +63,12 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "UI_DESIGNER_EDITOR_MODE.PaletteManager.STATE": "right",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "564",
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.STATE": "ToolWindow",
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "296",
     "WebServerToolWindowFactoryState": "false",
     "import_schema_mapping": "<schema-mapping>\n  <databases>\n    <list>\n      <schema-mapping-item>\n        <source-data-source-id>ad6229f7-4293-4640-a168-8c1a799e2404</source-data-source-id>\n        <source-path>database/&quot;neondb&quot;/schema/&quot;public&quot;</source-path>\n        <target-data-source-id>ad6229f7-4293-4640-a168-8c1a799e2404</target-data-source-id>\n        <target-path>database/&quot;neondb&quot;/schema/&quot;public&quot;</target-path>\n      </schema-mapping-item>\n    </list>\n  </databases>\n</schema-mapping>",
-    "last_opened_file_path": "C:/Users/Jan/Desktop/rs2xml.jar",
+    "last_opened_file_path": "C:/Users/Jan/Desktop/jbcrypt-0.4.jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -173,7 +180,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/master" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>

@@ -9,5 +9,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="postgresql-42.6.0" level="project" />
     <orderEntry type="library" name="rs2xml" level="project" />
+    <orderEntry type="library" name="jbcrypt-0.4" level="project" />
   </component>
 </module>

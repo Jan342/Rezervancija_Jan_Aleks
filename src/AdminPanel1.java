@@ -135,9 +135,10 @@ public class AdminPanel1 {
     }
     void table_load(){
         try {
-            pst = con.prepareStatement("SELECT *  FROM uporabniki" );
+            pst = con.prepareStatement("SELECT username,email  FROM uporabniki" );
             ResultSet rs = pst.executeQuery();
             table1.setModel(DbUtils.resultSetToTableModel(rs));
+            table1.revalidate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
