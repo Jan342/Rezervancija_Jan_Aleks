@@ -4,13 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdfd5564-457c-4c72-a0ed-7c853bc0ffbc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/AdminView.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AdminView.java" afterDir="false" />
+    <list default="true" id="cdfd5564-457c-4c72-a0ed-7c853bc0ffbc" name="Changes" comment="Visualno polepšal">
+      <change afterPath="$PROJECT_DIR$/src/AdminPanel2.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AdminPanel2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AdminPanel1.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdminPanel1.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AdminPanel1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdminPanel1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AdminView.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdminView.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AdminView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdminView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

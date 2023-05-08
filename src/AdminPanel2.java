@@ -7,15 +7,15 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.sql.*;
 
+public class AdminPanel2 {
 
-public class AdminPanel1 {
     private JPanel panel1;
-    private JTable table1;
-    private JTextField textName;
+    private JTable table2;
     private JButton deleteButton;
-    private JButton searchButton;
     private JButton refreshButton;
     private JButton backButton;
+    private JTextField textName;
+    private JButton searchButton;
 
     private JFrame frame;
 
@@ -23,25 +23,23 @@ public class AdminPanel1 {
     PreparedStatement pst;
 
 
-    public AdminPanel1(){
-        frame = new JFrame("Uporabniki");
+    public AdminPanel2() {
+        frame = new JFrame("Rezervacija");
         frame.setContentPane(panel1);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
-        frame.setSize(600,500);
+        frame.setSize(600, 500);
         frame.setVisible(true);
 
         connect();
-        table_load();
-
         searchButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 try {
-                    PreparedStatement pst = con.prepareStatement("SELECT * FROM select_uporabniki_user(?)");
+                    PreparedStatement pst = con.prepareStatement("SELECT * FROM select_rezervacija_user(?)");
                     pst.setString(1, textName.getText());
                     ResultSet rs = pst.executeQuery();
-                    table1.setModel(DbUtils.resultSetToTableModel(rs));
+                    table2.setModel(DbUtils.resultSetToTableModel(rs));
 
                 } catch (SQLException e) {
                     e.printStackTrace();
@@ -53,20 +51,20 @@ public class AdminPanel1 {
         deleteButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                int selectedid = (int) table1.getModel().getValueAt(table1.getSelectedRow(), 0) ;
+                int selectedid = (int) table2.getModel().getValueAt(table2.getSelectedRow(), 0) ;
                 try {
 
-                    PreparedStatement pst = con.prepareStatement("SELECT delete_uporabnik_id(?)");
+                    PreparedStatement pst = con.prepareStatement("SELECT delete_rezervacija_id(?)");
                     pst.setInt(1, selectedid);
                     ResultSet rs = pst.executeQuery();
-                    table1.setModel(DbUtils.resultSetToTableModel(rs));
+                    table2.setModel(DbUtils.resultSetToTableModel(rs));
                 }catch (SQLException e) {
                     e.printStackTrace();
                 }
                 table_load();
             }
         });
-        table1.addMouseListener(new MouseAdapter() {
+        table2.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 updateCellValue();
@@ -88,25 +86,25 @@ public class AdminPanel1 {
         });
     }
     private void updateCellValue() {
-        int row = table1.getSelectedRow();
-        int col = table1.getSelectedColumn();
-        Object oldValue = table1.getValueAt(row, col);
+        int row = table2.getSelectedRow();
+        int col = table2.getSelectedColumn();
+        Object oldValue = table2.getValueAt(row, col);
 
         String newValue = JOptionPane.showInputDialog("Enter new value:", oldValue);
         if (newValue != null && !newValue.equals(oldValue)) {
 
-            table1.setValueAt(newValue, row, col);
+            table2.setValueAt(newValue, row, col);
 
 
             updateDatabase(row, col, newValue);
         }
     }
     private void updateDatabase(int row, int col, String newValue) {
-        String columnName = table1.getColumnName(col);
-        int id = (int) table1.getValueAt(row, 0);
+        String columnName = table2.getColumnName(col);
+        int id = (int) table2.getValueAt(row, 0);
         connect();
         try {
-            String sql = "UPDATE uporabniki SET " + columnName + " = ? WHERE id = ?";
+            String sql = "UPDATE rezervacija SET " + columnName + " = ? WHERE id = ?";
             pst = con.prepareStatement(sql);
             pst.setString(1, newValue);
             pst.setInt(2, id);
@@ -117,6 +115,7 @@ public class AdminPanel1 {
             JOptionPane.showMessageDialog(null, "Error updating database: " + e.getMessage());
         }
     }
+
     public void connect() {
         try {
             Class.forName("org.postgresql.Driver");
@@ -135,9 +134,9 @@ public class AdminPanel1 {
     }
     void table_load(){
         try {
-            pst = con.prepareStatement("SELECT *  FROM uporabniki" );
+            pst = con.prepareStatement("SELECT id,id_uporabniki,datum_rezervaije,ura_rezervacije,mesto_rezervacije,sport_rezervacije,igrisca_rezervacije FROM rezervacija" );
             ResultSet rs = pst.executeQuery();
-            table1.setModel(DbUtils.resultSetToTableModel(rs));
+            table2.setModel(DbUtils.resultSetToTableModel(rs));
         } catch (SQLException e) {
             e.printStackTrace();
         }

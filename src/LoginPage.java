@@ -247,7 +247,7 @@ public class LoginPage extends JFrame implements ActionListener {
                 dispose(); // close the current login page form
             } else if (username.equals("admin") && password.equals("123")) {
                 messageLabel.setText("Logged in as admin!");
-                new AdminPanel1();
+                new AdminView();
                 dispose();
             } else {
                 messageLabel.setText("Invalid username or password");
